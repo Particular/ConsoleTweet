@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ConsoleTweet</id>
+    <version>$version$</version>
+    <title>ConsoleTweet</title>
+    <authors>Particular Software</authors>
+    <owners>Particular Software</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ConsoleTweet</description>
+    <summary></summary>
+    <tags>ConsoleTweet</tags>
+  </metadata>
+  <files>
+    <file src="..\..\src\ConsoleTweet\bin\Release\ConsoleTweet.exe" target="tools" />
+  </files>
+</package>
