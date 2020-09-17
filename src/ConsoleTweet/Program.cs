@@ -1,9 +1,9 @@
-﻿using CommandLine;
-using CommandLine.Text;
-using TweetSharp;
-
-namespace ConsoleTweet
+﻿namespace ConsoleTweet
 {
+    using CommandLine;
+    using CommandLine.Text;
+    using TweetSharp;
+
     abstract class AuthenticationOptions
     {
         [Option("key", HelpText = "Consumer (API) key.", Required = true)]
@@ -46,13 +46,17 @@ namespace ConsoleTweet
 
             var result = 1;
 
-            if (!Parser.Default.ParseArgumentsStrict(args, options, (verb, subOptions) =>
-            {
-                if (verb == "update" && subOptions != null)
+            if (!Parser.Default.ParseArgumentsStrict(
+                args,
+                options,
+                (verb, subOptions) =>
                 {
-                    result = PostUpdate((UpdateSubOptions)subOptions);
-                }
-            }, () => { }))
+                    if (verb == "update" && subOptions != null)
+                    {
+                        result = PostUpdate((UpdateSubOptions)subOptions);
+                    }
+                },
+                () => { }))
             {
                 return 1;
             }
