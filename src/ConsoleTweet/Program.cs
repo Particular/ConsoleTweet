@@ -63,7 +63,7 @@
             return result;
         }
 
-        private static int PostUpdate(UpdateSubOptions options)
+        static int PostUpdate(UpdateSubOptions options)
         {
             var service = new TwitterService(options.ConsumerKey, options.ConsumerSecret);
             service.AuthenticateWith(options.AccessToken, options.AccessTokenSecret);
